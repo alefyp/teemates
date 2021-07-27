@@ -3,8 +3,12 @@
 
 .container {
   background-color: $rich-black-color;
+  position: fixed;
+  top: 0;
+
   color: $white-color;
   height: 76px;
+  width: 100%;
   @include flex-around;
   &__logo {
     @include flex-around;

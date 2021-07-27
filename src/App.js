@@ -4,12 +4,14 @@ import ChampionsPage from "./components/ChampionsPage/ChampionsPage";
 import Team from "./components/Team/Team";
 import Landing from "./components/Landing/Landing";
 import "./App.scss";
+import LegalAnnouncement from "./components/LegalAnnouncement/LegalAnnouncement";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className="App-main">
         <Switch>
           <Route path="/champions" exact>
             <ChampionsPage />
@@ -22,6 +24,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
