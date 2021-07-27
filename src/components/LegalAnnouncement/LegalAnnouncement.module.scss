@@ -1,6 +1,9 @@
 @import "../../styles/colors";
+@import "../../styles/utils";
 
 .container {
+  @include flex-center;
+  height: 32px;
   background-color: black;
   color: white;
   width: 100%;

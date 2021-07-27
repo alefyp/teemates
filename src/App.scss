@@ -9,6 +9,7 @@
     margin: 76px 0;
     width: 100%;
     max-width: 1280px;
-    padding: 1vw;
+    padding: calc(1vw + 24px);
+    min-height: calc(100vh - 272px);
   }
 }

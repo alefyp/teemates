@@ -1,17 +1,24 @@
 import styles from "./Landing.module.scss";
+import { ReactComponent as Arrow } from "../../assets/arrow.svg";
 
 function Landing() {
   return (
     <div className={styles.container}>
       <section className={styles.container__intro}>
         <div>
-          <h1>Welcome to Teemates!</h1>
+          <h3>WHAT IS THIS?!</h3>
           <p>
             League of Legends is a team-based strategy game where two teams of
-            five powerful champions face off to destroy the other’s base. Choose
-            from over 140 champions to make epic plays, secure kills, and take
-            down towers as you battle your way to victory.
+            five powerful champions face off to destroy the other’s base. You
+            can choose from over 140 champions to make epic plays, secure kills,
+            and take down towers as you battle your way to victory.
           </p>
+          <br></br>
+          <strong>
+            But wait a minute... 140 champions? That's a lot! How can I pick
+            one?
+          </strong>
+          '
         </div>
 
         <img
@@ -23,25 +30,35 @@ function Landing() {
       </section>
 
       <section className={styles.container__power}>
-        <h2>POWER UP YOUR CHAMP </h2>
+        <h3>HEADS UP!</h3>
         <p>
-          Champions get stronger by earning experience to level up and gold to
-          buy more powerful items as the game progresses. Staying on top of
-          these two factors is crucial to overpowering the enemy team and
-          destroying their base.
+          A team composition should be made up of 5 champions that fulfill the
+          function for each fundamental role. In the champions option you can
+          add your favorites for the selection phase and determine if your team
+          has everything to win ...or troll.
         </p>
       </section>
 
       <section className={styles.container__experience}>
         <div>
-          <h2>Ear Experience!</h2>
+          <h3>POWER UP</h3>
           <p>
             When champions earn a certain amount of experience, they level up
             and can unlock or strengthen abilities and raise their base stats.
             Gain experience by killing enemy units and champions, assisting in a
             kill, and destroying defense structures.
           </p>
-          <button>Meet them all!</button>
+          <br></br>
+          <p>
+            Champions get stronger by earning experience to level up and gold to
+            buy more powerful items as the game progresses. Staying on top of
+            these two factors is crucial to overpowering the enemy team and
+            destroying their base.
+          </p>
+
+          <button>
+            Take a look to the champions <Arrow />{" "}
+          </button>
         </div>
 
         <img

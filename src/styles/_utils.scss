@@ -13,3 +13,20 @@
   align-items: center;
   align-content: center;
 }
+
+@mixin button-styles {
+  background-color: $cadet-blue-color;
+  padding: 12px 24px;
+  font-size: 14px;
+  min-width: 56px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $middle-blue-color;
+  }
+  &:active,
+  &:focus {
+    outline: $cadet-blue-color solid 1px;
+    border: 1px solid black;
+  }
+}

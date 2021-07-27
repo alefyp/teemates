@@ -2,16 +2,26 @@
 @import "../../styles/colors.scss";
 
 .container {
+  text-align: center;
+  h2,
+  h3 {
+    margin: 36px 0;
+  }
+
+  section {
+    @include flex-center;
+    width: 100%;
+  }
+
   img {
     width: 70%;
   }
 
-  &__intro {
-    @include flex-center;
+  &__img__thresh {
+    margin-top: -120px;
   }
 
   &__power {
-    @include flex-center;
     flex-direction: column;
     p {
       max-width: 50%;
@@ -20,26 +30,13 @@
   }
 
   &__experience {
-    @include flex-center;
     flex-direction: row-reverse;
   }
 
-  section {
-    width: 100%;
-  }
-
   button {
-    background-color: $cadet-blue-color;
-    padding: 12px 24px;
-    min-width: 56px;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background-color: $middle-blue-color;
-    }
-    &:active {
-      outline: $cadet-blue-color solid 1px;
-    }
+    @include button-styles;
+    @include flex-center;
+    margin: 24px;
   }
 }
 

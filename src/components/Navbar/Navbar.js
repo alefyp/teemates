@@ -17,7 +17,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink to="/team" exact activeClassName={styles.nav__selected}>
-            The dream team ♡
+            MY TEAM
           </NavLink>
         </li>
       </ul>
