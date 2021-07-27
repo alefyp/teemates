@@ -9,7 +9,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, $lato-font, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, $roboto-font, sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,6 +26,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: $arvo-font;
+h6,
+a {
+  font-family: $lora-font;
 }

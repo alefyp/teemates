@@ -2,9 +2,10 @@
 @import "../../styles/colors";
 
 .container {
-  background-color: $rich-black-color;
+  background-color: $black-color;
   position: fixed;
   top: 0;
+  text-transform: uppercase;
 
   color: $white-color;
   height: 76px;

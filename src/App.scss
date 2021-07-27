@@ -3,11 +3,12 @@
 .App {
   @include flex-center;
   flex-direction: column;
+  background-image: url("./assets/background-pattern.svg");
+
   &-main {
-    margin-top: 76px;
+    margin: 76px 0;
     width: 100%;
     max-width: 1280px;
     padding: 1vw;
-    border: 1px solid gray;
   }
 }
