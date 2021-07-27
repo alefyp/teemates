@@ -1,8 +1,7 @@
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import ChampionsPage from "./components/ChampionsPage/ChampionsPage";
 import Team from "./components/Team/Team";
-import ChampionPage from "./components/ChampionPage/ChampionPage";
 import Landing from "./components/Landing/Landing";
 import "./App.scss";
 
@@ -12,13 +11,10 @@ function App() {
       <Header />
       <main>
         <Switch>
-          <Route path="/champs/:name">
-            <ChampionPage />
-          </Route>
-          <Route path="/champs">
+          <Route path="/champions" exact>
             <ChampionsPage />
           </Route>
-          <Route path="/team">
+          <Route path="/team" exact>
             <Team />
           </Route>
           <Route path="/" exact>

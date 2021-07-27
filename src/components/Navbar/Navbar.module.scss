@@ -1,0 +1,29 @@
+@import "../../styles/utils";
+@import "../../styles/colors";
+
+.nav {
+  ul {
+    @include flex-center;
+    list-style: none;
+    min-width: 520px;
+
+    li {
+      @include flex-center;
+      height: 76px;
+      padding: 0 40px;
+      transition: background-color 0.4s ease-out;
+      &:hover {
+        background-color: $cadet-blue-color;
+      }
+      a {
+        text-decoration: none;
+        color: $white-color;
+      }
+    }
+  }
+
+  &__selected {
+    border-bottom: 2px solid $cadet-blue-color;
+    margin-top: 2px;
+  }
+}

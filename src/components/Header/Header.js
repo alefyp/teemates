@@ -5,8 +5,8 @@ import Navbar from "../Navbar/Navbar";
 function Header() {
   return (
     <header className={styles.container}>
-      <div className={styles.logo__container}>
-        <img src={logo} className={styles.logo__img} alt="Teemates logo" />
+      <div className={styles.container__logo}>
+        <img src={logo} className={styles.container__img} alt="Teemates logo" />
         <h1>Teemates</h1>
       </div>
       <Navbar />

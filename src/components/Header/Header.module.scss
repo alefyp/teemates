@@ -6,15 +6,13 @@
   color: $white-color;
   height: 76px;
   @include flex-around;
-  .logo {
-    &__container {
-      @include flex-around;
-      &:hover {
-        color: $baby-powder-color;
-      }
+  &__logo {
+    @include flex-around;
+    &:hover {
+      color: $baby-powder-color;
     }
   }
-  img {
+  &__img {
     max-height: 48px;
   }
 }
