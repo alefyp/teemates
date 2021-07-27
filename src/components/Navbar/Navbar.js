@@ -11,7 +11,7 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" exact activeClassName="jeje">
+          <NavLink to="/champs/:name" exact activeClassName="jeje">
             Getting started
           </NavLink>
         </li>

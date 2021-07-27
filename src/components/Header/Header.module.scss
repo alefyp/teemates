@@ -1,0 +1,20 @@
+@import "../../styles/utils";
+@import "../../styles/colors";
+
+.container {
+  background-color: $rich-black-color;
+  color: $white-color;
+  height: 76px;
+  @include flex-around;
+  .logo {
+    &__container {
+      @include flex-around;
+      &:hover {
+        color: $baby-powder-color;
+      }
+    }
+  }
+  img {
+    max-height: 48px;
+  }
+}
