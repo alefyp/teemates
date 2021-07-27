@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 
 function Navbar() {

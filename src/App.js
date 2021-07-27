@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import ChampionsPage from "./components/ChampionsPage/ChampionsPage";
 import Team from "./components/Team/Team";
 import Landing from "./components/Landing/Landing";
 import "./App.scss";
-import LegalAnnouncement from "./components/LegalAnnouncement/LegalAnnouncement";
 import Footer from "./components/Footer/Footer";
 
 function App() {
