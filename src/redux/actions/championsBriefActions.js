@@ -17,16 +17,3 @@ export const loadChampionsBrief = () => {
       });
   };
 };
-
-// export function loadChampionsBrief() {
-//   return function (dispatch) {
-//     return leagueApi
-//       .getAllChampions()
-//       .then((champions) => {
-//         dispatch(loadChampionsBriefSuccess(champions));
-//       })
-//       .catch((error) => {
-//         throw error;
-//       });
-//   };
-// }
