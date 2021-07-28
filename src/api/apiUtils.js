@@ -1,12 +1,12 @@
-export function handleResponse(response) {
+export const handleResponse = (response) => {
   if (response.status === 200) {
     return response;
   }
 
   throw new Error("Network response was not Ok");
-}
+};
 
-export function handleError(error) {
+export const handleError = (error) => {
   if (error.response) {
     console.error(
       "The request was made and the server responded with a status code " +
@@ -18,4 +18,4 @@ export function handleError(error) {
     console.error(error.message);
   }
   throw error;
-}
+};
