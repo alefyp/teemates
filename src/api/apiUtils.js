@@ -1,6 +1,6 @@
 export const handleResponse = (response) => {
   if (response.status === 200) {
-    return response;
+    return response.data;
   }
 
   throw new Error("Network response was not Ok");
