@@ -1,5 +1,8 @@
-export async function handleResponse(response) {
-  if (response.status === 200) return response;
+export function handleResponse(response) {
+  if (response.status === 200) {
+    return response;
+  }
+
   throw new Error("Network response was not Ok");
 }
 
