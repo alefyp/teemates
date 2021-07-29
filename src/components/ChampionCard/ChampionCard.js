@@ -15,14 +15,14 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
       <img src={imageUrl} alt={champion.name} />
 
       <div className={styles.utility}>
-        <div>
+        <div className={styles.text__container}>
           <h4>{champion.name}</h4>
           <p>
             {" "}
             {champion.tags[0]} | {champion.tags[1]}
           </p>
         </div>
-        <div>
+        <div className={styles.button__container}>
           <button
             className={styles.button}
             onClick={() => {
@@ -31,7 +31,7 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
             }}
           >
             {" "}
-            <StarIcon style={{ fill: teamStyle ? "black" : "none" }} />
+            <StarIcon style={{ fill: teamStyle ? "white" : "none" }} />
           </button>
         </div>
       </div>

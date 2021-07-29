@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 2px;
-  cursor: pointer;
+  width: 100%;
 
   &:hover {
     img {
@@ -36,12 +36,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     bottom: 0;
     width: 100%;
     color: $baby-powder-color;
     padding: 4px 12px;
+
     h4 {
-      letter-spacing: 8px;
+      letter-spacing: 4px;
       padding: 0;
       // display: inline;
       text-transform: uppercase;
@@ -57,7 +59,11 @@
 
   .button {
     background-color: none;
-    padding: 4px;
-    border: 1px solid white;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px;
+    width: 40px;
+    min-width: 40px;
   }
 }
