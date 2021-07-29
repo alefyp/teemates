@@ -1,10 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import ChampionCard from "./ChampionCard";
+import { Provider } from "react-redux";
+import configureStore from "../../redux/configureStore";
+const store = configureStore();
 
 test('renders champion card and checks everything is laid out correctly"', () => {
   const elChamp = { tags: ["Soy un tag"], id: "Aatrox", name: "Aatrox" };
 
-  render(<ChampionCard champion={elChamp} />);
+  render(
+    <Provider store={store}>
+      <ChampionCard champion={elChamp} />
+    </Provider>
+  );
   const linkElement = screen.getByText(/Aatrox/i);
   expect(linkElement).toBeInTheDocument();
 
