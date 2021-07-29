@@ -6,15 +6,15 @@ const TeamMemberCard = ({ champion }) => {
   return (
     <section className={styles.container}>
       <header>
-        <h1 className={styles.container__title}>
+        <h3 className={styles.container__title}>
           {champion.name}:{champion.title}
-        </h1>
+        </h3>
         <img src={imageUrl} alt={champion.name} />
       </header>
       <p>{champion.blurb}</p>
       <div>
         <p>
-          Tags: {champion.tags[0]} {champion.tags[1]}
+          Tags: {champion.tags[0]} | {champion.tags[1]}
         </p>
       </div>
     </section>
