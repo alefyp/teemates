@@ -26,15 +26,14 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
           <button
             className={styles.button}
             onClick={() => {
-              if (team.length < 5) {
+              if (team.length === 5 && teamStyle === false) {
+                alert("Already 5 champs in your team!");
+              } else {
                 teamStyle ? onRemoveChamp(champion) : onAddChamp(champion);
                 setTeamStyle(!teamStyle);
-              } else {
-                alert("Oops! You already picked 5 champs!");
               }
             }}
           >
-            {" "}
             <StarIcon style={{ fill: teamStyle ? "white" : "none" }} />
           </button>
         </div>

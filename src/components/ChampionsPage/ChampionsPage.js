@@ -6,7 +6,6 @@ import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
-  // const [champions, setChampions] = useState([]);
   useEffect(() => {
     onLoadChampions();
   }, []);
@@ -22,7 +21,7 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
       <header>
         <h2>Champions</h2>
       </header>
-      {/* <SearchMenu handleFilter={handleFilter} /> */}
+      {/* <SearchMenu  /> */}
       <ChampionsList champions={champions} />
     </section>
   );

@@ -2,11 +2,9 @@ import { useState } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/lupa.svg";
 import styles from "./SearchMenu.module.scss";
 
-const SearchMenu = ({ handleFilter }) => {
+const SearchMenu = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [rolType, setRolType] = useState("");
-
-  handleFilter(searchTerm, rolType);
 
   const roles = [
     "Assassins",
