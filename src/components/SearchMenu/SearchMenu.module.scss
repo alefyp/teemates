@@ -15,8 +15,26 @@
       width: 30%;
       height: 44px;
       border: solid 1px rgba(122, 122, 122, 0.5);
+      position: relative;
+
+      .SearchIcon {
+        height: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 20px;
+        position: absolute;
+        z-index: 12;
+      }
+      label {
+        visibility: hidden;
+      }
       input {
         height: 100%;
+        width: 100%;
+        padding: 6px 36px;
+        border: solid 1px rgb(255, 255, 255);
+        position: absolute;
+        left: 0;
       }
     }
     &__tabs {

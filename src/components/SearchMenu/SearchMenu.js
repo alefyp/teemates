@@ -31,7 +31,6 @@ const SearchMenu = () => {
     <section className={styles.container}>
       <nav className={styles.nav}>
         <div className={styles.nav__search}>
-          <SearchIcon />
           <label htmlFor="search-term">
             <span>Search: </span>
           </label>
@@ -43,6 +42,7 @@ const SearchMenu = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+          <SearchIcon className={styles.SearchIcon} />
         </div>
         <div className={styles.nav__tabs}>
           <ul>{rolTabs}</ul>

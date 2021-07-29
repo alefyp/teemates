@@ -10,7 +10,13 @@
   color: $white-color;
   height: 76px;
   width: 100%;
+
   @include flex-around;
+
+  h1 {
+    margin-left: 12px;
+    letter-spacing: 12px;
+  }
   &__logo {
     @include flex-around;
     &:hover {

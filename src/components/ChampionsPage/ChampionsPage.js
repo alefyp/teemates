@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
+import ChampionsList from "../ChampionsList/ChampionsList";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   useEffect(() => {
     onLoadChampions();
   }, []);
 
-  console.log(championsBrief);
+  const champions = Object.values(championsBrief);
 
   return (
     <section className={styles.container}>
@@ -17,9 +18,12 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
         <h2>Champions</h2>
       </header>
       <SearchMenu />
+      <ChampionsList champions={champions} />
     </section>
   );
 };
+
+/* Champions redux container */
 
 const mapStateToProps = (state) => {
   return { championsBrief: state.championsBrief };
