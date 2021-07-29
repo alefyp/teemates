@@ -3,10 +3,20 @@
 
 .container {
   height: 294px;
-  transform: skew(-4deg);
   position: relative;
   overflow: hidden;
   border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    img {
+      transform: scale(1);
+    }
+
+    .utility {
+      background-color: rgb(0, 0, 19);
+    }
+  }
 
   img {
     width: 100%;
@@ -15,10 +25,12 @@
     transform: scale(1.05);
     object-position: 85% 50%;
     transition: all 0.5s;
+    transform: scale(1.05);
   }
 
   .utility {
     background-color: rgb(5, 40, 59);
+    transition: background-color 0.4s ease-out;
     position: absolute;
     display: flex;
     justify-content: space-between;
