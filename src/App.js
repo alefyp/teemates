@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import ChampionsPage from "./components/ChampionsPage/ChampionsPage";
-import Team from "./components/Team/Team";
+import TeamContainer from "./components/TeamContainer/TeamContainer";
 import Landing from "./components/Landing/Landing";
 import "./App.scss";
 import Footer from "./components/Footer/Footer";
@@ -23,7 +23,7 @@ function App() {
                 <ChampionsPage />
               </Route>
               <Route path="/team" exact>
-                <Team />
+                <TeamContainer />
               </Route>
               <Route path="/" exact>
                 <Landing />

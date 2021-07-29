@@ -1,4 +1,5 @@
 import * as championsBriefActions from "../../redux/actions/championsBriefActions";
+import * as teamActions from "../../redux/actions/teamActions";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
@@ -26,12 +27,14 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
 /* Champions redux container */
 
 const mapStateToProps = (state) => {
-  return { championsBrief: state.championsBrief };
+  return { championsBrief: state.championsBrief, team: state.team };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onLoadChampions: () => dispatch(championsBriefActions.loadChampionsBrief()),
+    onAddChamp: () => dispatch(teamActions.addChampion),
+    onRemoveChamp: () => dispatch(teamActions.removeChampion),
   };
 };
 
