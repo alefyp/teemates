@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  position: relative;
+
+  header {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    font-size: 44px;
+    width: 100%;
+    background-color: rgba(239, 253, 248, 0.356);
+    bottom: 0;
+    padding: 0px 24px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+  }
+
+  margin: 20px 0;
+  border-bottom: 1px solid gray;
+}
