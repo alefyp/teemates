@@ -33,8 +33,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onLoadChampions: () => dispatch(championsBriefActions.loadChampionsBrief()),
-    onAddChamp: () => dispatch(teamActions.addChampion),
-    onRemoveChamp: () => dispatch(teamActions.removeChampion),
+    onAddChamp: teamActions.addChampion,
+    onRemoveChamp: teamActions.removeChampion,
   };
 };
 

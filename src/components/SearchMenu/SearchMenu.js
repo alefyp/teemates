@@ -19,6 +19,7 @@ const SearchMenu = () => {
   const rolTabs = roles.map((rol) => (
     <li key={rol}>
       <button
+        id="tab"
         className={rolType === rol ? styles.active : styles.inactive}
         onClick={() => setRolType(rol)}
       >
