@@ -1,10 +1,9 @@
 import ChampionCard from "../ChampionCard/ChampionCard";
+import styles from "./ChampionsList.Module.scss";
 
 const ChampionsList = ({ champions }) => {
-  console.log(champions, "holongo", Object.values(champions));
-
   const champList = champions.map((champ) => <ChampionCard champion={champ} />);
-  return <ul>{champList}</ul>;
+  return <ul className={styles.container}>{champList}</ul>;
 };
 
 export default ChampionsList;

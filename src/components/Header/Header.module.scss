@@ -3,6 +3,7 @@
 
 .container {
   background-color: $black-color;
+  z-index: 5;
   position: fixed;
   top: 0;
   text-transform: uppercase;
