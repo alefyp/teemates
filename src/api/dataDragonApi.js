@@ -1,7 +1,7 @@
 import axios from "axios";
 import { handleResponse, handleError } from "./apiUtils";
 
-const baseUrl = "http://ddragon.leagueoflegends.com/cdn/11.15.1/data/en_US";
+const baseUrl = "https://ddragon.leagueoflegends.com/cdn/11.15.1/data/en_US";
 
 export const getAllChampions = () => {
   return axios
