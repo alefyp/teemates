@@ -1,12 +1,14 @@
 import * as teamActions from "../../redux/actions/teamActions";
 import { useEffect } from "react";
 import { connect } from "react-redux";
+import TeamList from "../TeamList/TeamList";
 
 function TeamContainer({ team, onAddChamp, onRemoveChamp }) {
   console.log(team, "My team");
   return (
     <section>
       <h2>TEAM SELECT</h2>
+      <TeamList />
     </section>
   );
 }
