@@ -17,15 +17,28 @@
     transition: all 0.5s;
   }
 
-  h3 {
+  .utility {
     background-color: rgb(5, 40, 59);
     position: absolute;
-    letter-spacing: 4px;
-    padding: 4px 12px;
-    color: $baby-powder-color;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     bottom: 0;
-    text-transform: uppercase;
-    font-weight: bold;
+    width: 100%;
+    color: $baby-powder-color;
+    padding: 4px 12px;
+    h4 {
+      letter-spacing: 8px;
+      padding: 0;
+      // display: inline;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    p {
+      font-size: 12px;
+      margin-top: -6px;
+      // display: inline;
+      font-weight: lighter;
+    }
   }
 }
