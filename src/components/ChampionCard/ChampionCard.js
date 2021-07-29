@@ -26,8 +26,12 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
           <button
             className={styles.button}
             onClick={() => {
-              teamStyle ? onRemoveChamp(champion) : onAddChamp(champion);
-              setTeamStyle(!teamStyle);
+              if (team.length < 5) {
+                teamStyle ? onRemoveChamp(champion) : onAddChamp(champion);
+                setTeamStyle(!teamStyle);
+              } else {
+                alert("Oops! You already picked 5 champs!");
+              }
             }}
           >
             {" "}
