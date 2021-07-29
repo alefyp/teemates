@@ -28,9 +28,9 @@ const SearchMenu = () => {
   ));
 
   return (
-    <section>
-      <nav>
-        <div>
+    <section className={styles.container}>
+      <nav className={styles.nav}>
+        <div className={styles.nav__search}>
           <SearchIcon />
           <label htmlFor="search-term">
             <span>Search: </span>
@@ -44,7 +44,7 @@ const SearchMenu = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div>
+        <div className={styles.nav__tabs}>
           <ul>{rolTabs}</ul>
         </div>
       </nav>

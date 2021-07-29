@@ -10,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] API Request: DataDragon - Riot Games Official League of Legends API
 - [x] Testing React Test renderer and React Testing Library with Coverage > 60%
 - [x] Redux - React Redux - Async calls with Thunk
+- [x] Hosting with Firebase and Github Actions
 
 ## Available Scripts
 

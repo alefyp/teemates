@@ -2,6 +2,7 @@ import * as championsBriefActions from "../../redux/actions/championsBriefAction
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
+import styles from "./ChampionsPage.Module.scss";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   useEffect(() => {
@@ -11,10 +12,12 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   console.log(championsBrief);
 
   return (
-    <div>
-      <h2>Champions</h2>
+    <section className={styles.container}>
+      <header>
+        <h2>Champions</h2>
+      </header>
       <SearchMenu />
-    </div>
+    </section>
   );
 };
 

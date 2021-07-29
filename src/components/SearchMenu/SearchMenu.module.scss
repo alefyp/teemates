@@ -1,3 +1,27 @@
+@import "../../styles/utils";
+
+.container {
+  @include flex-center;
+  flex-direction: row;
+  background-color: blueviolet;
+  width: 100%;
+
+  .nav {
+    @include flex-center;
+    flex-direction: row;
+    background-color: rgb(43, 226, 73);
+    width: 100%;
+
+    &__search {
+      width: 30%;
+    }
+
+    &__tabs {
+      width: 70%;
+    }
+  }
+}
+
 .active {
   background-color: blue;
 }
