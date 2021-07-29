@@ -4,9 +4,9 @@ import styles from "./SearchMenu.module.scss";
 
 const SearchMenu = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [rolType, setRolType] = useState("");
+  const [rolType, setRolType] = useState("Tank");
 
-  const rols = [
+  const roles = [
     "Assassins",
     "Fighters",
     "Mages",
@@ -16,10 +16,10 @@ const SearchMenu = () => {
     "",
   ];
 
-  const rolTabs = rols.map((rol, index) => (
-    <li key={index}>
+  const rolTabs = roles.map((rol) => (
+    <li key={rol}>
       <button
-        className={rol === rolType ? styles.active : styles.inactive}
+        className={rolType === rol ? styles.active : styles.inactive}
         onClick={(rol) => setRolType(rol)}
       >
         {rol === "" ? "All" : rol}
