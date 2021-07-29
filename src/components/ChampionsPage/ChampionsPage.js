@@ -1,10 +1,9 @@
 import * as championsBriefActions from "../../redux/actions/championsBriefActions";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
-import { filterByInput, filterByRol } from "./filters";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   // const [champions, setChampions] = useState([]);
@@ -13,11 +12,6 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   }, []);
 
   const champions = Object.values(championsBrief);
-
-  const handleFilter = (searchValue, rolTypeValue) => {
-    // champions = filterByInput(champions, searchValue);
-    // champions = filterByRol(champions, rolTypeValue);
-  };
 
   if (championsBrief.length === 0) {
     return <p>Loading...</p>;
@@ -28,7 +22,7 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
       <header>
         <h2>Champions</h2>
       </header>
-      <SearchMenu handleFilter={handleFilter} />
+      {/* <SearchMenu handleFilter={handleFilter} /> */}
       <ChampionsList champions={champions} />
     </section>
   );
