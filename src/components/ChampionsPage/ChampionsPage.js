@@ -1,15 +1,19 @@
 import * as championsBriefActions from "../../redux/actions/championsBriefActions";
 import { useEffect } from "react";
 import { connect } from "react-redux";
+import SearchMenu from "../SearchMenu/SearchMenu";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   useEffect(() => {
     onLoadChampions();
   }, []);
 
+  console.log(championsBrief);
+
   return (
     <div>
-      <h1>soy la página con todos los champs</h1>
+      <h2>Champions</h2>
+      <SearchMenu />
     </div>
   );
 };

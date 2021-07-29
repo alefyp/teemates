@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img width="250" src="assets/pngegg.png" alt="Logo">
+	<img width="250" src="../src/assets/pngegg.png" alt="Logo">
   # Teemates
 </h1>
 
