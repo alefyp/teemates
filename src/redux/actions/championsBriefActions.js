@@ -9,8 +9,8 @@ export const loadChampionsBrief = () => {
   return (dispatch) => {
     return leagueApi
       .getAllChampions()
-      .then((champions) => {
-        dispatch(loadChampionsBriefSuccess(champions));
+      .then((response) => {
+        dispatch(loadChampionsBriefSuccess(response.data));
       })
       .catch((error) => {
         throw error;

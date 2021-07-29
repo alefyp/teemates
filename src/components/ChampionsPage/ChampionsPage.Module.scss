@@ -1,0 +1,13 @@
+@import "../../styles/utils";
+@import "../../styles/colors";
+
+.container {
+  @include flex-center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 88px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+  }
+}

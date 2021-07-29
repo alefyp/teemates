@@ -1,12 +1,34 @@
-import { getAllChampions } from "../../api/dataDragonApi";
+import * as championsBriefActions from "../../redux/actions/championsBriefActions";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import SearchMenu from "../SearchMenu/SearchMenu";
+import styles from "./ChampionsPage.Module.scss";
 
-const ChampionsPage = () => {
-  console.log("holongo", getAllChampions());
+const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
+  useEffect(() => {
+    onLoadChampions();
+  }, []);
+
+  console.log(championsBrief);
+
   return (
-    <div>
-      <h1>soy la página con todos los champs</h1>
-    </div>
+    <section className={styles.container}>
+      <header>
+        <h2>Champions</h2>
+      </header>
+      <SearchMenu />
+    </section>
   );
 };
 
-export default ChampionsPage;
+const mapStateToProps = (state) => {
+  return { championsBrief: state.championsBrief };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLoadChampions: () => dispatch(championsBriefActions.loadChampionsBrief()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChampionsPage);
