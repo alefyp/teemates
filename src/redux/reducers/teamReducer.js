@@ -6,13 +6,8 @@ export default function teamReducer(state = initialState.team, action) {
     case actionTypes.ADD_CHAMPION:
       return [...state, { ...action.champion }];
     case actionTypes.REMOVE_CHAMPION:
-      const tempState = [...state];
-      for (let i = 0; i < tempState.length; i++) {
-        if (tempState[i].id === action.champion.id) {
-          tempState.splice(i, 1);
-        }
-      }
-      return [tempState];
+      return state.filter((champ) => champ.id !== action.champion.id);
+
     default:
       return state;
   }

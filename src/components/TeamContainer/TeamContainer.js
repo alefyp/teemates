@@ -1,14 +1,18 @@
 import * as teamActions from "../../redux/actions/teamActions";
-import { useEffect } from "react";
 import { connect } from "react-redux";
 import TeamList from "../TeamList/TeamList";
+import styles from "./TeamContainer.Module.scss";
 
 function TeamContainer({ team, onAddChamp, onRemoveChamp }) {
   console.log(team, "My team");
   return (
-    <section>
+    <section className={styles.container}>
       <h2>TEAM SELECT</h2>
-      <TeamList />
+      <TeamList
+        team={team}
+        onAddChamp={onAddChamp}
+        onRemoveChamp={onRemoveChamp}
+      />
     </section>
   );
 }

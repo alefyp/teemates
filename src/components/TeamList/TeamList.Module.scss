@@ -1,0 +1,19 @@
+@import "../../styles/utils";
+.noTeam {
+  @include flex-center;
+  flex-direction: column;
+  p {
+    max-width: 720px;
+    text-align: center;
+  }
+  img {
+    max-width: 480px;
+  }
+  button,
+  .backButton {
+    border: 0;
+    padding: 8px 12px;
+    @include flex-center;
+    @include button-styles;
+  }
+}

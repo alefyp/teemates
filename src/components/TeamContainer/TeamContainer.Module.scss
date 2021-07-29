@@ -1,0 +1,12 @@
+@import "../../styles/utils";
+
+.container {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    font-size: 88px;
+    text-transform: uppercase;
+  }
+}
