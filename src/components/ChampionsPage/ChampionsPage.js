@@ -1,12 +1,11 @@
 import * as championsBriefActions from "../../redux/actions/championsBriefActions";
-import * as teamActions from "../../redux/actions/teamActions";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
 
-const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
+const ChampionsPage = ({ onLoadChampions, championsBrief, team }) => {
   useEffect(() => {
     onLoadChampions();
   }, []);
@@ -27,14 +26,12 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
 /* Champions redux container */
 
 const mapStateToProps = (state) => {
-  return { championsBrief: state.championsBrief, team: state.team };
+  return { championsBrief: state.championsBrief };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onLoadChampions: () => dispatch(championsBriefActions.loadChampionsBrief()),
-    onAddChamp: teamActions.addChampion,
-    onRemoveChamp: teamActions.removeChampion,
   };
 };
 

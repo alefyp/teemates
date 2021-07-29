@@ -4,7 +4,6 @@ import initialState from "./initialState";
 export default function teamReducer(state = initialState.team, action) {
   switch (action.type) {
     case actionTypes.ADD_CHAMPION:
-      console.log(action);
       return [...state, { ...action.champion }];
     case actionTypes.REMOVE_CHAMPION:
       const tempState = [...state];
