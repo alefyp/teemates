@@ -8,14 +8,14 @@ import ChampionsList from "../ChampionsList/ChampionsList";
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   const [champions, setChampions] = useState({ ...championsBrief });
   useEffect(() => {
-    if (championsBrief.length === 0) {
+    if (Object.values(championsBrief).length === 0) {
       onLoadChampions().catch((error) => alert("Whooooooa"));
     } else {
       setChampions({ ...championsBrief });
     }
   }, [championsBrief]);
 
-  if (championsBrief.length === 0) {
+  if (Object.values(championsBrief).length === 0) {
     return <p>Loading...</p>;
   }
 
