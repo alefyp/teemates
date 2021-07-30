@@ -1,16 +1,19 @@
 import * as championsBriefActions from "../../redux/actions/championsBriefActions";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
+  const [champions, setChampions] = useState({ ...championsBrief });
   useEffect(() => {
-    onLoadChampions();
-  }, []);
-
-  const champions = Object.values(championsBrief);
+    if (championsBrief.length === 0) {
+      onLoadChampions().catch((error) => alert("Whooooooa"));
+    } else {
+      setChampions({ ...championsBrief });
+    }
+  }, [championsBrief]);
 
   if (championsBrief.length === 0) {
     return <p>Loading...</p>;
@@ -22,7 +25,7 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
         <h2>Champions</h2>
       </header>
       {/* <SearchMenu  /> */}
-      <ChampionsList champions={champions} />
+      <ChampionsList champions={Object.values(champions)} />
     </section>
   );
 };
