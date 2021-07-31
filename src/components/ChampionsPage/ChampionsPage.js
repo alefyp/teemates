@@ -21,12 +21,17 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
     return <p>Loading...</p>;
   }
 
+  /* por ahora solo el input */
+  const filterHandler = (searchValue) => {
+    console.log(searchValue);
+  };
+
   return (
     <section className={styles.container}>
       <header>
         <h2>Champions</h2>
       </header>
-      {/* <SearchMenu /> */}
+      <SearchMenu onFilter={filterHandler} />
       <ChampionsList champions={champions} />
     </section>
   );
