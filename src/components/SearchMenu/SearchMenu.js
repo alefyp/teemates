@@ -44,7 +44,8 @@ const SearchMenu = ({ onFilter }) => {
             type="text"
             value={searchTerm}
             onChange={(e) => {
-              setSearchTerm(e.target.value);
+              let term = e.target.value;
+              setSearchTerm(term);
               onFilter(searchTerm);
             }}
           />

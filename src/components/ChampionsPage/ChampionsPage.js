@@ -21,9 +21,9 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
     return <p>Loading...</p>;
   }
 
-  /* por ahora solo el input */
   const filterHandler = (searchValue) => {
-    console.log(searchValue);
+    const filtrado = filterByInput(championsBrief, searchValue);
+    setChampions(filtrado);
   };
 
   return (
