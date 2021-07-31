@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/lupa.svg";
 import styles from "./SearchMenu.module.scss";
 
-const SearchMenu = () => {
+const SearchMenu = ({ onFilter }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [rolType, setRolType] = useState("");
 
   const roles = [
-    "Assassins",
-    "Fighters",
-    "Mages",
-    "Marksmen",
+    "Assassin",
+    "Fighter",
+    "Mage",
+    "Marksman",
     "Support",
     "Tank",
     "",
@@ -21,7 +21,9 @@ const SearchMenu = () => {
       <button
         id="tab"
         className={rolType === rol ? styles.active : styles.inactive}
-        onClick={() => setRolType(rol)}
+        onClick={() => {
+          setRolType(rol);
+        }}
       >
         {rol === "" ? "All" : rol}
       </button>
@@ -41,7 +43,9 @@ const SearchMenu = () => {
             aria-label=""
             type="text"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
           />
           <SearchIcon className={styles.SearchIcon} />
         </div>

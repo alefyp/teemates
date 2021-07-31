@@ -1,4 +1,4 @@
 export default {
   team: [],
-  championsBrief: {},
+  championsBrief: [],
 };

@@ -4,18 +4,20 @@ import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
+import { filterByRol, filterByInput } from "./filters";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
-  const [champions, setChampions] = useState({ ...championsBrief });
+  const [champions, setChampions] = useState([...championsBrief]);
+
   useEffect(() => {
-    if (Object.values(championsBrief).length === 0) {
+    if (championsBrief.length === 0) {
       onLoadChampions().catch((error) => alert("Whooooooa"));
     } else {
-      setChampions({ ...championsBrief });
+      setChampions([...championsBrief]);
     }
   }, [championsBrief]);
 
-  if (Object.values(championsBrief).length === 0) {
+  if (championsBrief.length === 0) {
     return <p>Loading...</p>;
   }
 
@@ -24,8 +26,8 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
       <header>
         <h2>Champions</h2>
       </header>
-      {/* <SearchMenu  /> */}
-      <ChampionsList champions={Object.values(champions)} />
+      {/* <SearchMenu /> */}
+      <ChampionsList champions={champions} />
     </section>
   );
 };
