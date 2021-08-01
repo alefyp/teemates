@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import SearchMenu from "../SearchMenu/SearchMenu";
 import styles from "./ChampionsPage.Module.scss";
 import ChampionsList from "../ChampionsList/ChampionsList";
-import { filterByRol, filterByInput } from "./filters";
 
 const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   const [champions, setChampions] = useState([...championsBrief]);
