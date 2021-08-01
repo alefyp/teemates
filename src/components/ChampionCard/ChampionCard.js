@@ -11,12 +11,12 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
   const [teamStyle, setTeamStyle] = useState(iconButtonState);
 
   return (
-    <div className={styles.container}>
+    <li className={styles.container}>
       <img src={imageUrl} alt={champion.name} />
 
       <div className={styles.utility}>
         <div className={styles.text__container}>
-          <h4>{champion.name}</h4>
+          <h3>{champion.name}</h3>
           <p>
             {" "}
             {champion.tags[0]} | {champion.tags[1]}
@@ -24,7 +24,6 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
         </div>
         <div className={styles.button__container}>
           <button
-            role="tab"
             aria-label={teamStyle ? "Starred champion" : "Non Starred champion"}
             className={styles.button}
             onClick={() => {
@@ -40,7 +39,7 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
           </button>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

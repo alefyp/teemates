@@ -20,6 +20,7 @@ const SearchMenu = ({ onFilter }) => {
   const rolTabs = roles.map((rol) => (
     <li key={rol}>
       <button
+        role="tab"
         className={rolType === rol ? styles.active : styles.inactive}
         id={`tab-for-${rol}`}
         onClick={() => {
