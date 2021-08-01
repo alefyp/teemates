@@ -20,10 +20,12 @@ const SearchMenu = ({ onFilter }) => {
   const rolTabs = roles.map((rol) => (
     <li key={rol}>
       <button
-        aria-label={`Search champions by ${rol} rol`}
+        aria-label={
+          rol === "" ? "Search all champions" : `Search for ${rol} rol`
+        }
         tabindex="0"
         className={rolType === rol ? styles.active : styles.inactive}
-        id={`tab-for-${rol}`}
+        id={rol === "" ? "tab-for-all-champions" : `tab-for-${rol}`}
         onClick={() => {
           let newTerm = { text: searchTerm.text, role: rol };
           setSearchTerm(newTerm);
