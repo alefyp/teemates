@@ -22,8 +22,8 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   }
 
   const filterHandler = (searchValue) => {
-    const filtrado = filterByInput(championsBrief, searchValue);
-    setChampions(filtrado);
+    const filtered = filterByInput(championsBrief, searchValue);
+    setChampions(filtered);
   };
 
   return (

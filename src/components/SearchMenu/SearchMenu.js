@@ -46,7 +46,7 @@ const SearchMenu = ({ onFilter }) => {
             onChange={(e) => {
               let term = e.target.value;
               setSearchTerm(term);
-              onFilter(searchTerm);
+              onFilter(term);
             }}
           />
           <SearchIcon className={styles.SearchIcon} />
