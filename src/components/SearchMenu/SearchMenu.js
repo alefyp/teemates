@@ -3,7 +3,8 @@ import { ReactComponent as SearchIcon } from "../../assets/lupa.svg";
 import styles from "./SearchMenu.module.scss";
 
 const SearchMenu = ({ onFilter }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState({ text: "", role: "" });
+
   const [rolType, setRolType] = useState("");
 
   const roles = [
@@ -22,7 +23,10 @@ const SearchMenu = ({ onFilter }) => {
         id="tab"
         className={rolType === rol ? styles.active : styles.inactive}
         onClick={() => {
+          let newTerm = { text: searchTerm.text, role: rol };
+          setSearchTerm(newTerm);
           setRolType(rol);
+          onFilter(newTerm);
         }}
       >
         {rol === "" ? "All" : rol}
@@ -42,11 +46,12 @@ const SearchMenu = ({ onFilter }) => {
             placeholder="Search"
             aria-label=""
             type="text"
-            value={searchTerm}
+            value={searchTerm.text}
             onChange={(e) => {
               let term = e.target.value;
-              setSearchTerm(term);
-              onFilter(term);
+              let newTerm = { text: term, role: searchTerm.role };
+              setSearchTerm(newTerm);
+              onFilter(newTerm);
             }}
           />
           <SearchIcon className={styles.SearchIcon} />

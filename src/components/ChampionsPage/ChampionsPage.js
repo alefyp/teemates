@@ -22,8 +22,17 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   }
 
   const filterHandler = (searchValue) => {
-    const filtered = filterByInput(championsBrief, searchValue);
-    setChampions(filtered);
+    let filteredChampions = championsBrief.filter((champion) => {
+      let championCombinedTags = champion.tags.join("").toLowerCase();
+      let championName = champion.name.toLowerCase();
+
+      return (
+        championCombinedTags.includes(searchValue.role.toLowerCase()) &&
+        championName.includes(searchValue.text.toLowerCase())
+      );
+    });
+
+    setChampions(filteredChampions);
   };
 
   return (
