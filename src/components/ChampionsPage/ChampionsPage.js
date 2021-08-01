@@ -39,7 +39,7 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
       <header>
         <h2>Champions</h2>
         <p>
-          Mark your preferred champions with a star. Master one of masther them
+          Mark your preferred champions with a star. Master one of master them
           all!
         </p>
       </header>
