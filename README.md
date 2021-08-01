@@ -12,6 +12,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Redux - React Redux - Async calls with Thunk
 - [x] Hosting with Firebase and Github Actions
 
+## Feedback and Accesibility concerns
+
+#### Improvements since release
+
+- [x] Proper access with keyboard
+- [x] Descending order for heading tags
+- [x] Lists: id, aria-label, aria-role updated
+- [x] Correct identification of buttons and other selectable elements
+- [x] Negative Tabindex / reset when routing through paths
+- [x] Some new semantic html tags added
+
+<p align="center">
+	<img width="350" src="Accesibility.png" alt="Logo">
+</p>
+
+#### ✔️ 100% accesibility in each view and proper manual testing.
+
 ## Available Scripts
 
 In the project directory, you can run:
