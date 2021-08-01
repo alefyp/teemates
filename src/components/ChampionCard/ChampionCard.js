@@ -24,6 +24,8 @@ const ChampionCard = ({ champion, onAddChamp, onRemoveChamp, team }) => {
         </div>
         <div className={styles.button__container}>
           <button
+            role="tab"
+            aria-label={teamStyle ? "Starred champion" : "Non Starred champion"}
             className={styles.button}
             onClick={() => {
               if (team.length === 5 && teamStyle === false) {
