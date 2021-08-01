@@ -6,11 +6,11 @@ import ExperienceSection from "./components/ExperienceSection";
 
 const Landing = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container} tabindex="-1">
       <IntroSection />
       <PowerSection />
       <ExperienceSection />
-    </div>
+    </section>
   );
 };
 

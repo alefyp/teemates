@@ -35,7 +35,7 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
   };
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} tabindex="-1">
       <header>
         <h2>Champions</h2>
         <p>

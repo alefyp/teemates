@@ -6,7 +6,7 @@ import styles from "./TeamContainer.Module.scss";
 function TeamContainer({ team, onAddChamp, onRemoveChamp }) {
   console.log(team, "My team");
   return (
-    <section className={styles.container}>
+    <section className={styles.container} tabindex="-1">
       <h2>TEAM SELECT</h2>
       <TeamList
         team={team}
