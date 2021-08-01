@@ -38,6 +38,10 @@ const ChampionsPage = ({ onLoadChampions, championsBrief }) => {
     <section className={styles.container}>
       <header>
         <h2>Champions</h2>
+        <p>
+          Mark your preferred champions with a star. Master one of masther them
+          all!
+        </p>
       </header>
       <SearchMenu onFilter={filterHandler} />
       <ChampionsList champions={champions} />

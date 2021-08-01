@@ -4,9 +4,11 @@
 .container {
   @include flex-center;
   flex-direction: column;
+  text-align: center;
 
   h2 {
     font-size: 88px;
+    margin-bottom: -16px;
     text-transform: uppercase;
   }
 }
